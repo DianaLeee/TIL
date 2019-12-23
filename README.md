@@ -175,3 +175,41 @@ index.html                 index.html
 ---
 <Web hosting>
 
+- using github pages
+
+---
+<웹서버 운영하기>
+- 웹서버라는 프로그램을 설치해야 한다.
+웹 서버라는 제품군에는 여러 제품들이 있다. (Apache, IIS, Nginx 등등)
+
+- bitnami MAMP Stack
+M(ac) A(pache) M(ySQL) P(HP)
+Apache 웹서버를 설치하기 위해 bitnami를 까는 것
+
+웹서버 설치 완료!
+
+- http://localhost:8081 === http://localhost:8081/index.html === http://127.0.0.1:8081/index.html
+localhost - 도메인 네임
+127.0.0.1 - ip 주소 
+
+- 응용프로그램 > mampstack-7.3.12-0 > apache2 > htdocs
+여기다가 프로젝트 파일들 옮기가
+
+- 웹서버와 웹브라우저의 통신
+현재 ip 주소 확인하기: 설정 > 네트워크 > 고급 > TCP/IP탭 > ip 주소
+172.30.63.9:8081/index.html
+Web Browser ---------------------> Web Server
+            <--------------------- index.html
+                                172.30.63.9:8081
+                                   
+스벅은 주소를 가변으로 줘서 안되는듯
+
+---
+<마치며>
+- 웹페이지(웹사이트)를 아름답게 하려면 CSS를 배워야한다. > 이거 이후에 웹 다자이너, 웹 퍼블리셔같은 직업이 생김
+- 사용자와 상호작용 하는 웹페이지(웹사이트)를 만들고 샆으면 Javascript를 배워야한다. > 웹 프론트앤드 엔지니어 같은 직업이 발달
+
+---
+<부록>
+- 댓글 기능 달기 using Disqus
+https://disqus.com/
