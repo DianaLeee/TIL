@@ -213,3 +213,51 @@ Web Browser ---------------------> Web Server
 <부록>
 - 댓글 기능 달기 using Disqus
 https://disqus.com/
+
+---
+
+## CSS
+
+<CSS 등장 이전에는...>
+```
+<li>
+  <a href="html.html">
+    <font color="red">HTML</font>
+  </a>
+</li>
+```
+- li, a 라는 정보 안에 폰트 컬러라는 의미없는 정보가 담겨져있음
+- a 태그가 1억개면 어떻게 다 바꿀건데?
+- 태그는 근본적인 해결책이 되지 못한다.
+
+--
+<CSS의 등장>
+
+- 웹브라우저가 처음 나왔을때 웹브라우저는 HTML만 해석해서 처리하는 프로그램이었다. 그래서 웹브라우저는 기본적으로 코드를 HTML이라고 생각한다.
+
+- 그러니까 이건 CSS 문법이라고 해석해야한다고 알려줘야 함. === <style></style> 태그 사용
+
+- 코딩을 잘하는 법 => `중복의 제거`
+
+---
+<속성의 기본>
+- 전체에다가 적용 안하고 싶으면 style 이라는 속성을 사용
+<a href="2.html" style="color:red;">CSS</a>
+"color:red;" 는 html의 속성이다.
+style 이라는 속성은 그 값으로 css의 효과가 들어와야 함.
+
+선택자? `a {color:red}`에서 a가 선택자임
+
+따라서, 웹페이지 안에서 CSS를 삽입하는 방법 2가지
+1. 스타일 태그를 쓴다 <style> a {color: red} </style>
+2. 스타일 속성을 쓴다 <a href="..." style="color: red"> </a>
+
+---
+
+a {  // selector
+  color: red; // declaration 어떤 효과를 줄 것인가? 선언. 효과
+// property: value  
+} 
+
+---
+
