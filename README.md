@@ -405,3 +405,123 @@ body 태그 안에 same 쓰는 거랑 동일한 모양새의 코드인데 뭐가
 
 
 
+---
+
+<콘솔>
+- 관리자 페이지 > console
+- 문자열.length
+- 콘솔에서 실행되는 자바스크립트는 해당 웹페이지 안에서 삽입되어 있는 자바스크립트처럼 동작한다.
+해당 웹페이지 대상으로 실행된다.
+
+
+---
+
+<데이터타입(자료형) - 문자열과 숫자>
+- https://developer.mozilla.org/ko/docs/Web/JavaScript/Data_structures
+
+- Boolean, Null, Undefined, Number, String, Symbol(ES6) + Object
+
+- javascript s tring event
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String
+.length
+.toUpperCase()
+.indexOf()
+.trim() 앞 뒤 공백 삭제
+
+- 1+1 => 2
+- "1"+"1" => "11"
+
+---
+
+<변수와 대입 연산자>
+```
+x = 1;
+x는 변수
+=는 대입 연산자
+
+좌항과 우항을 결합하여 우항의 값을 만들어 낸다.
+
+
+1 = 2; // 오류남
+1은 상수이기 때문에 변수를 대입할 수 없다.
+
+constant vs variable
+```
+- 콘솔창에서 실행을 유보시키고 싶으면 shift+Enter
+- 변수를 사용할땐 가급적 var 붙여주길.....
+
+---
+
+<웹브라우저 제어>
+- 버튼 클릭 했을 때 `<body style="background-color: black; color: white;">` 이렇게 스타일 바꾸고 싶다.
+- 그런데 html은 정적인 언어라 로딩되면 바꿀 수가 없는데...
+
+---
+
+<CSS 기초> -> 넘어감
+* CSS는 어떤 목적의 언어인가요?
+웹페이지를 스타일링 하기 위한 언어
+* CSS를 웹페이지에 삽입하는 방법은 무엇인가요?
+스타일 태그를 사용하거나 스타일 속성을 사용한다
+* style 속성은 무엇인가요? 
+<a style="color:red"></a>와 같이 태그 안에 속성으로 CSS 값을 삽입해서 스타일을 표현하는 것을 말한다.
+* 선택자가 무엇인가요?
+a {
+   color: red;
+} 
+라는 코드에서 a를 선택자라고 하면 html의 특정 태그를 선택하여 어떤 효과를 줄것인지 선택/결정하는 것.
+태그 선택자 외에 클래스 선택자(.), id 선택자(#) 등이 있다. 
+
+
+---
+
+<제어할 태그 선택하기>
+- javascript select tag by css selector
+https://developer.mozilla.org/ko/docs/Web/API/Document/querySelector
+`document.querySelector(selectors);`
+
+getElementById
+querySelector('body').style.color="red";
+
+---
+
+<프로그램, 프로그래밍, 프로그래머>
+
+시초는 연주회의 순서를 부르는 단어가 프로그램.
+순서를 프로그램이라고 함.
+이 순서를 만드는 행위를 프로그래밍.
+순서를 만드는 사람을 프로그래머.
+
+반복적인이게 하는 일.. 불행하고 빡치는 일... 이를 극복하기 위해 프로그래밍 언어를 만듦.
+
+다만 html은 묘사의 언어라서 (웹페이지를 그려내는) 순서고 반복이고가 없음. 
+하지만 js는 사용자와 상호작용하기 위해 고안된거고 시간의 순서에따라 웹브라우저의 여러 기능이 실행되어야하기 때문에 프로그래밍이라는 형태를 띄고 있고 이가 html과 Js가 다르게 된 큰 특징이다.
+
+근데... 쓰다보니까 
+조건에 따라서 다른기능이 실행되게 하고
+반복적으로 기능이 실행되게 하고
+순서를 정리정돈하고 싶어하고
+이러한 방법들이 고안된 것. (조건문, 반복문, 함수)
+
+
+---
+<조건문>
+- 토글 구현!
+- 비교연산자, boolean, 조건문 강의 스킵
+
+콘솔에서 
+document.querySelector('#night_day).value 쳐보면서 확인하고... 
+
+---
+<리팩토링>
+코딩을 하고 나면 코드가 좀 비효율 적인 면이 생기기 마련.
+동작하는 것은 그대로 두고 코드 자체를 효율적으로 만들어서 가독성 높이고, 유지보수 쉽게 하고, 중복된 것 낮추고 -> 리펙토링
+틈틈히 리팩토링 해야 좋은 프로그램 만들 수 있다. 
+
+- `this라는 키워드는 자신이 포함된 tag를 가리킨다.`
+
+- 코딩 잘하는 법? 중복을 끝까지 찾아가서 없애라아
+
+--- 
+<반복문/배열>
+- 배열
