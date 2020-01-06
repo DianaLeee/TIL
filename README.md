@@ -525,3 +525,39 @@ document.querySelector('#night_day).value 쳐보면서 확인하고...
 --- 
 <반복문/배열>
 - 배열
+연관된 데이터를 담아두는 수납상자
+`var message = ["Diana", "hello"];`
+
+- 반복문 
+while()
+
+<배열과 반복문의 활용>
+- 야간모드일때는 링크가 밝게, 주간모드일때는 링크가 어둡게 
+
+- querySelector은 맨처음 한개만 가져옴. 모든 a 엘레먼트들을 가져오고싶으면?
+`querySelectorAll('a')`
+근데 배열이라 반복문으로 돌려야함.
+
+---
+<함수>
+- 웹페이지가 커지면 인터넷을 통해서 전송할때 비용, 시간, 노력도 비례해서 커진다는 소리.
+
+```
+function nightDayHandler() { 
+  ...
+}
+```
+
+- 함수는 수납상자 같은 것.
+- parameter & argument, return
+
+function nightDayHandler(parameter) { // 매개변수
+  ...
+
+  return parameter++; // 반환값
+}
+
+nightDayHandler(argument); // 인자
+```
+
+- 기존코드 리펙토링 (this는 더이상 this가 아니게 된다. 인자로 전달하고 함수에서 매개변수로 받이서 this를 대체할 수 있게 해야함)
