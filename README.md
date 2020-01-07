@@ -606,3 +606,26 @@ coworkers.showAll = function () {
   }
 }
 ```
+
+---
+<객체의 활용>
+```
+function func1 () {
+  ...
+}
+
+function func2 () {
+  ...
+}
+
+였던것을
+
+var funcs = {
+  one: function () {
+    ...
+  },
+  two: function () {
+    ...
+  }
+}
+```
