@@ -551,6 +551,7 @@ function nightDayHandler() {
 - 함수는 수납상자 같은 것.
 - parameter & argument, return
 
+```
 function nightDayHandler(parameter) { // 매개변수
   ...
 
@@ -561,3 +562,47 @@ nightDayHandler(argument); // 인자
 ```
 
 - 기존코드 리펙토링 (this는 더이상 this가 아니게 된다. 인자로 전달하고 함수에서 매개변수로 받이서 this를 대체할 수 있게 해야함)
+
+---
+<객체>
+- 객체: 이름이 있는 정리정돈 상자
+property란 객체 내부의 속성으로 key, value로 구성된다. .으로 접근 가능하다
+```
+var coworkers = {
+  "programmer" : "hello", // key : value
+  "designer" : "world",
+}
+// 추가 시
+coworkers.bookkeeper = "duru";
+coworkers["data scientist"] = "taeho";
+```
+
+- 객체와 반복문
+```
+for(var key in coworkers) {
+  document.write(key + ": " + coworkers[key] + "<br>");
+}
+```
+
+- 객체 프로퍼티와 메소드
+Object 안에 property로 function도 넣을 수 있다. 
+```
+// 함수 선언
+coworkers.showAll = function () {
+  for (var key in cowokers) {
+      document.write(key + ": " + coworkers[key] + '<br>')
+  }
+}
+
+coworkers.showAll(); //호출
+```
+근데 객체 이름이 바뀌면 어쩔건데? coworkers 가 colleagues로 바뀌면... -> this 쓰자!
+
+```
+//이젠 여기 coworkers만 바꿔주면 된다!
+coworkers.showAll = function () {
+  for (var key in this) {
+      document.write(key + ": " + this[key] + '<br>')
+  }
+}
+```
