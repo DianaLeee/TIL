@@ -18,3 +18,6 @@ https://www.notion.so/leediana/WEB2-JavaScript-afb9e5c8c1ee4037872ec16d57234c23
 ## Javascript
 1. 자바스크립트 개발자라면 알아야 할 33가지 개념   
 https://velog.io/@jakeseo_me/series/33conceptsofjavascript
+
+- #1 콜스택   
+https://github.com/DianaLeee/BTB/issues/1
