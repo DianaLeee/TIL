@@ -1,0 +1,130 @@
+html {
+  font-family: "Spoqa Han Sans", "sans-serif";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+body {
+  background-color: #2ecc71;
+}
+
+.top-text {
+  margin-top: 2rem;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+}
+
+/* row */
+/* row clearfix */
+.row::after {
+  content: "";
+  display: block;
+  clear: left;
+}
+
+.row {
+  margin-bottom: 1.5rem;
+}
+
+/* column */
+[class*="col-"] {
+  float: left;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  padding: 1.5rem 0;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  height: 4.5rem;
+  background: #121212;
+  border-radius: 5px;
+}
+
+.col-1 {
+  width: 48px;
+}
+.col-2 {
+  width: 128px;
+}
+.col-3 {
+  width: 208px;
+}
+.col-4 {
+  width: 288px;
+}
+.col-5 {
+  width: 368px;
+}
+.col-6 {
+  width: 448px;
+}
+.col-7 {
+  width: 528px;
+}
+.col-8 {
+  width: 608px;
+}
+.col-9 {
+  width: 688px;
+}
+.col-10 {
+  width: 768px;
+}
+.col-11 {
+  width: 848px;
+}
+.col-12 {
+  width: 928px;
+}
+
+/* 가이드라인 */
+.overlay-grid {
+  position: relative;
+}
+
+.overlay-grid:hover::after {
+  content: "";
+  display: block;
+  width: 960px;
+  min-height: 100%;
+  /* 그라디언트를 주는데 오른쪽으로 진행하며, 20% 지점까지는 투명, 20~80%까지는 어두운색상, 80% 부터 끝까지 투명 */
+  /* 그 다음 그라디언트는 위에서 아래로 진행하며, 97%지점까지는 투명, 97% 부터 끝까지 어두운색상 넣겠다는 뜻 - 즉 선이 그어짐*/
+  background-image: linear-gradient(to right, transparent 20%, rgba(52, 73, 94, 0.3) 20% 80%, transparent 80%), linear-gradient(to bottom, transparent 97%, #2c3e50 97%);
+  /* 첫번째 그라디언트가 가로 80 */
+  /* 두번째 그라디언트가 세로 24 */
+  background-size: 80px 1px, 1px 24px;
+  background-repeat: repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 글자 */
+h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 4.5rem;
+}
+
+p {
+  font-weight: 200;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h1,
+p {
+  text-align: center;
+  color: #fff;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: underline;
+}

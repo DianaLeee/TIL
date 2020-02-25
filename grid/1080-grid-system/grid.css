@@ -1,0 +1,125 @@
+html {
+  font-family: "Spoqa Han Sans", "sans-serif";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+body {
+  background-color: dodgerblue;
+}
+
+.top-text {
+  margin-top: 2rem;
+}
+
+.container {
+  width: 1080px;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+}
+
+/* row */
+.row::after {
+  content: "";
+  clear: left;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+/* column */
+[class*="col-"] {
+  float: left;
+  margin-left: 9px;
+  margin-right: 9px;
+
+  padding: 1.5rem 0;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+  background: #121212;
+  border-radius: 5px;
+}
+
+.col-1 {
+  width: 72px;
+}
+.col-2 {
+  width: 162px;
+}
+.col-3 {
+  width: 252px;
+}
+.col-4 {
+  width: 342px;
+}
+.col-5 {
+  width: 432px;
+}
+.col-6 {
+  width: 522px;
+}
+.col-7 {
+  width: 612px;
+}
+.col-8 {
+  width: 702px;
+}
+.col-9 {
+  width: 792px;
+}
+.col-10 {
+  width: 882px;
+}
+.col-11 {
+  width: 972px;
+}
+.col-12 {
+  width: 1062px;
+}
+
+/* 가이드라인 */
+.overlay-grid {
+  position: relative;
+}
+
+.overlay-grid:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* 그라디언트를 주는데 오른쪽으로 진행하며, 20% 지점까지는 투명, 20~80%까지는 어두운색상, 80% 부터 끝까지 투명 */
+  /* 그 다음 그라디언트는 위에서 아래로 진행하며, 97%지점까지는 투명, 97% 부터 끝까지 어두운색상 넣겠다는 뜻 - 즉 선이 그어짐*/
+  background-image: linear-gradient(to right, transparent 10%, rgba(52, 73, 94, 0.3) 10% 90%, transparent 10%), linear-gradient(to bottom, transparent 97%, #2c3e50 97%);
+  /* 첫번째 그라디언트가 가로 80 */
+  /* 두번째 그라디언트가 세로 24 (1.5rem) */
+  background-size: 90px 1px, 1px 1.5rem;
+  background-repeat: repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 글자 */
+h1 {
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 4.5rem;
+}
+
+p {
+  font-weight: 200;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h1,
+p {
+  text-align: center;
+  color: #fff;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: underline;
+}
