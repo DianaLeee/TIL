@@ -1,7 +1,7 @@
 # BTB
 Back To Basic - HTML, CSS, Javascript 기본으로 돌아가서 다시 공부해보기
 
-## HTML, CSS, JS
+## 생활코딩 HTML, CSS, JS
 
 * 결과물: https://dianaleee.github.io/BTB/HTML/web/index.html   
   
@@ -14,6 +14,10 @@ https://www.notion.so/leediana/WEB2-CSS-dd21b49123c54c93a16e1e1c2aa9c7c8
 3. 생활코딩 WEB2-JS   
 https://www.notion.so/leediana/WEB2-JavaScript-afb9e5c8c1ee4037872ec16d57234c23   
 
+
+## Grid System
+1080px, 960px에서 12 columns Grid 시스템 설계해보기
+* 결과물: https://dianaleee.github.io/BTB/grid/1080-grid-system/grid.html
 
 ## Javascript
 ### 자바스크립트 개발자라면 알아야 할 33가지 개념   
