@@ -19,6 +19,9 @@ https://www.notion.so/leediana/WEB2-JavaScript-afb9e5c8c1ee4037872ec16d57234c23
 1080px, 960px에서 12 columns Grid 시스템 설계해보기
 * 결과물: https://dianaleee.github.io/BTB/grid/1080-grid-system/grid.html
 
+## 웹 퍼블리싱
+* 배경 영상 + 2 depth navigation 페이지: https://dianaleee.github.io/BTB/video-background-page/index.html
+
 ## Javascript
 ### 자바스크립트 개발자라면 알아야 할 33가지 개념   
 https://velog.io/@jakeseo_me/series/33conceptsofjavascript
