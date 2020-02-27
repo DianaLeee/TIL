@@ -22,6 +22,9 @@ https://www.notion.so/leediana/WEB2-JavaScript-afb9e5c8c1ee4037872ec16d57234c23
 ## 웹 퍼블리싱
 * 배경 영상 + 2 depth navigation 페이지: https://dianaleee.github.io/BTB/video-background-page/index.html
 
+## 김버그의 HTML은 재밌다 
+* 강의 정리: https://www.notion.so/leediana/HTML-58e4ebd2990d4aac8c7dd3d024f4484e
+
 ## Javascript
 ### 자바스크립트 개발자라면 알아야 할 33가지 개념   
 https://velog.io/@jakeseo_me/series/33conceptsofjavascript
