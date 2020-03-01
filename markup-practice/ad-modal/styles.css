@@ -1,1 +1,81 @@
 @import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+* {
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1f2d3d;
+  color: white;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #1f2d3d;
+}
+
+body::after {
+  content: "diana©";
+  display: block;
+  margin-top: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.modal {
+  color: #1f2d3d;
+  flex-grow: 0; /*Flex Item의 증가 너비 비율을 설정*/
+  flex-shrink: 0; /*Flex Item의 감소 너비 비율을 설정*/
+  background-color: #ffffff;
+  padding: 36px;
+  border-radius: 10px;
+  transition: box-shadow 250ms ease-in, transform 250ms ease-in;
+}
+
+.modal:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 1.35;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: #474747;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666666;
+  letter-spacing: 0.01em;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 320px;
+  height: 65px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #ff8806 0%, #fb07f3 100%);
+
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+}
