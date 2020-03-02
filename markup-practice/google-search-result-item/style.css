@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1f2d3d;
+  letter-spacing: -0.03em;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+}
+
+body::after {
+  content: "diana©";
+  display: block;
+  margin-top: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1f2d3d;
+}
+
+.google-search-result-item {
+  width: 100%;
+  max-width: 640px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.google-search-result-item h1 {
+  margin-bottom: 0;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.google-search-result-item a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.google-search-result-item h1 a {
+  /* 클래스의 h1의 a인것들 모두 선택*/
+  color: #1a0dab;
+}
+
+.google-search-result-item > a {
+  /* 클래스의 바로아래 a만 선택(직계자손) */
+  color: #006621;
+  letter-spacing: 0.02em;
+}
+
+.google-search-result-item p {
+  font-size: 14px;
+  line-height: 1.57;
+  color: #545454;
+  letter-spacing: -0.01em;
+}
+
+.google-search-result-item p strong {
+  font-weight: 700;
+}
