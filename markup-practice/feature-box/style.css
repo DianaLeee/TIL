@@ -38,7 +38,7 @@ body::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
   height: auto;
   border-radius: 30px;
