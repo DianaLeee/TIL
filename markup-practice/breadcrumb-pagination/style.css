@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1f2d3d;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+}
+
+body::after {
+  content: "diana©";
+  display: block;
+  margin-top: 50px;
+  color: #1f2d3d;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  margin-bottom: 56px;
+  font-size: 1.125rem;
+  color: #0366d6;
+}
+
+.breadcrumb::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  margin-right: 4px;
+  background-color: transparent;
+  background-image: url("./assets/icon-repository.svg");
+  background-repeat: no-repeat;
+}
+
+.breadcrumb a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb a:first-child::after {
+  content: "/";
+  margin: 0 0.25em;
+  color: #586069;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e1e4e8;
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+
+.pagination ol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.pagination li {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 32px;
+  border-right: 1px solid #e1e4e8;
+}
+
+.pagination a {
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.pagination > a:first-child {
+  border-right: 1px solid #e1e4e8;
+}
+
+.pagination li.current-page {
+  background-color: #0366d6;
+  border-color: #0366d6;
+}
+
+.pagination li.current-page a {
+  color: #ffffff;
+}
+
+.pagination *[disabled],
+.pagination .disabled {
+  color: #d1d5da;
+  background-color: #fafbfc;
+  /* prevents click event of anchor tag */
+  cursor: default;
+  pointer-events: none;
+}
