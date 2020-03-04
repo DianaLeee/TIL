@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1f2d3d;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+}
+
+body::after {
+  content: "diana©";
+  display: block;
+  margin-top: 50px;
+  color: #1f2d3d;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 960px;
+  background-color: #ffffff;
+  padding: 40px 25px;
+  border-radius: 5px;
+}
+
+.user-profile-photo {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  margin-right: 30px;
+}
+
+.user-profile-photo img {
+  border-radius: 150px;
+  width: 150px;
+  height: auto;
+  border: 1px solid #eaeaea;
+}
+
+.user-profile-data {
+  flex-grow: 2;
+}
+
+.user-profile-data h1 {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 32px;
+}
+
+.user-profile-data dl {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.user-profile-data dl div {
+  display: flex;
+  margin-right: 40px;
+  font-size: 16px;
+}
+
+.user-profile-data dl dt {
+  font-weight: 400;
+  margin-right: 4px;
+}
+
+.user-profile-data dl dd {
+  font-weight: 600;
+}
+
+.user-profile-data h2,
+.user-profile-data p,
+.user-profile-data a {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.user-profile-data h2 {
+  font-weight: 600;
+}
+
+.user-profile-data a {
+  color: #003569;
+  text-decoration: none;
+  font-weight: 600;
+}
