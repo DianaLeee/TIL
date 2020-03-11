@@ -31,4 +31,5 @@ https://velog.io/@jakeseo_me/series/33conceptsofjavascript
 - [#3 값 vs 참조](https://www.notion.so/leediana/3-vs-a9922c85eda1479a8a80fa0b23f0aeb0)
 
 ### 자바스크립트 문법
+- [간단정리](https://www.notion.so/leediana/20c93d5e694c4ab8b0730ac92172c89d)
 - [Hoisting(호이스팅)](https://medium.com/@_diana_lee/javascript-hoisting-%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85-2df9955db5c7)
