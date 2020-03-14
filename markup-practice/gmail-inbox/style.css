@@ -12,43 +12,43 @@ html {
 
 body {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   width: 100%;
   height: 100vh;
   margin: 0 auto;
-  background-color: #ee5253;
+  background-color: #9652ee;
 }
 
 body::after {
-  content: "kimbug©";
+  content: "diana©";
   display: block;
   margin-top: 50px;
-  color: #fff;
+  color: #ffffff;
   font-size: 12px;
   font-weight: 600;
 }
 
-.sr-only {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-  z-index: -1;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+.inbox .sr-only {
   visibility: hidden;
+  /* overflow: hidden; */
+  /* width: 1px; */
+  /* height: 1px; */
+  position: absolute;
+  /* z-index: -1; */
+  /* top: -9999px; */
+  /* left: -9999px; */
 }
 
 .inbox {
   max-width: 1140px;
   border-collapse: collapse;
   border-radius: 4px;
-  background-color: #fff;
+  background-color: #ffffff;
   font-size: 13.5px;
   color: #212529;
-  white-space: nowrap;
+  white-space: nowrap; /* 줄바꿈 안함 */
 }
 
 .inbox thead {
@@ -73,7 +73,7 @@ body::after {
 }
 
 .inbox tr.unread span {
-  font-weight: 400 !important;
+  font-weight: 400;
 }
 
 .inbox span:not(:nth-child(2)) {
@@ -96,16 +96,17 @@ body::after {
 }
 
 .inbox a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
 }
 
 .inbox-actions {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 
 .inbox-actions > * {
+  /* 직계? 바로 밑의 자식만 선택 */
   width: 24px;
   height: 24px;
   padding: 0;
@@ -119,20 +120,15 @@ body::after {
   height: 24px;
   border: none;
   background-color: transparent;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
   cursor: pointer;
   transition: opacity 100ms;
 }
 
-.inbox-star:hover,
-.inbox-checkbox:hover::after {
+.inbox-star:hover {
   opacity: 0.75;
 }
 
-.inbox-star:focus,
-.inbox-checkbox:focus {
+.inbox-star:focus {
   outline: none;
   box-shadow: none;
 }
@@ -140,8 +136,7 @@ body::after {
 .inbox-star {
   background-image: url(./assets/icon-star-border.svg);
 }
-
-.inbox-star.active {
+.inbox-star:active {
   background-image: url(./assets/icon-star.svg);
 }
 
@@ -165,7 +160,7 @@ body::after {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
+  /* height: 100%; */
   opacity: 0;
 }
