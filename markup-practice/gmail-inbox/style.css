@@ -136,7 +136,7 @@ body::after {
 .inbox-star {
   background-image: url(./assets/icon-star-border.svg);
 }
-.inbox-star:active {
+.inbox-star.active {
   background-image: url(./assets/icon-star.svg);
 }
 
