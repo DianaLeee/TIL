@@ -22,7 +22,7 @@ body {
 }
 
 body::after {
-  content: "kimbug©";
+  content: "diana©";
   display: block;
   margin-top: 50px;
   color: #1f2d3d;
@@ -30,21 +30,12 @@ body::after {
   font-weight: 600;
 }
 
-ul,
+ol,
 li {
   list-style-type: none;
-  padding-left: 0;
-  margin-left: 0;
 }
 
 .sr-only {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-  z-index: -1;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
   visibility: hidden;
 }
 
@@ -53,16 +44,16 @@ li {
   max-width: 540px;
   padding: 20px;
   border-radius: 4px;
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
 .music-play-item {
+  width: 100%;
   position: relative;
   display: flex;
   align-items: center;
   align-content: center;
-  width: 100%;
 }
 
 .music-album-cover {
@@ -73,8 +64,8 @@ li {
 }
 
 .music-info {
-  flex-grow: 1;
   display: flex;
+  flex-grow: 1; /* flex item에 설정 */
   justify-content: space-between;
   align-content: center;
   align-items: center;
