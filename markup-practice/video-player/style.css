@@ -1,0 +1,77 @@
+@import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "SpoqaHanSans";
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1f2d3d;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+}
+
+body::after {
+  content: "diana©";
+  display: block;
+  margin-top: 50px;
+  color: #1f2d3d;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.video-player {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 4px;
+  transition: box-shadow 200ms;
+}
+
+.video-player:hover {
+  box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.24%;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-player-info {
+  background-color: #ffffff;
+  padding: 8px 10px 10px;
+}
+
+.video-player-info h1 {
+  margin-bottom: 2px;
+  font-size: 1.3rem;
+  letter-spacing: -0.03em;
+  color: #383838;
+}
+
+.video-player-info p {
+  font-size: 1rem;
+  letter-spacing: -0.03em;
+  color: #8e8e93;
+}
