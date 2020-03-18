@@ -9,14 +9,14 @@ Back To Basic - HTML, CSS, Javascript 기본으로 돌아가서 다시 공부해
    
 - [생활코딩 WEB2-JS](https://www.notion.so/leediana/WEB2-JavaScript-afb9e5c8c1ee4037872ec16d57234c23)
 ### 결과물
-- [결과물](https://dianaleee.github.io/BTB/HTML/web/index.html)   
+- [결과물](https://dianaleee.github.io/TIL/HTML/web/index.html)   
 
 
 ## Grid System
-- [1080px, 960px에서 12 columns Grid 시스템 설계해보기](https://dianaleee.github.io/BTB/grid/1080-grid-system/grid.html)
+- [1080px, 960px에서 12 columns Grid 시스템 설계해보기](https://dianaleee.github.io/TIL/grid/1080-grid-system/grid.html)
 
 ## 웹 퍼블리싱
-* [배경 영상 + 2 depth navigation 페이지](https://dianaleee.github.io/BTB/video-background-page/index.html)
+* [배경 영상 + 2 depth navigation 페이지](https://dianaleee.github.io/TIL/video-background-page/index.html)
 
 ## 김버그의 HTML은 재밌다 
 * [강의 정리](https://www.notion.so/leediana/HTML-58e4ebd2990d4aac8c7dd3d024f4484e)
