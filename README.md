@@ -1,4 +1,4 @@
-# BTB
+# TIL
 
 Back To Basic - HTML, CSS, Javascript 기본으로 돌아가서 다시 공부해보기
 
