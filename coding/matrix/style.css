@@ -24,10 +24,16 @@ body {
 
 .row {
   display: flex;
+  background: rgb(255, 255, 255, 0);
+  transition: background 0.2s ease-in-out;
+}
+
+.row:hover {
+  background: rgb(255, 255, 255, 0.3);
 }
 
 .column {
-  background-color: #e2e2e2;
+  background-color: turquoise;
   height: 15px;
   width: 15px;
   margin: 3px;
