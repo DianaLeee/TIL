@@ -1,5 +1,13 @@
+@import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
 * {
   box-sizing: border-box;
+}
+
+html {
+  font-family: "SpoqaHanSans";
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 body {
@@ -16,7 +24,7 @@ body {
 .container {
   margin: 20px 0;
 }
-
+/* 
 .matrix {
   margin-bottom: 30px;
   width: 100%;
@@ -37,4 +45,85 @@ body {
   height: 15px;
   width: 15px;
   margin: 3px;
+} */
+
+img {
+  border-radius: 15%;
+  width: 64px;
+  height: 64px;
+  opacity: 0.5;
+}
+
+img:hover {
+  opacity: 1;
+}
+
+table {
+  overflow: hidden;
+}
+
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+td,
+th {
+  position: relative;
+  padding: 3px;
+}
+.item-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+td:hover::after,
+th:hover::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3);
+  right: 0;
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+}
+
+th.basic-item img {
+  opacity: 0.8;
+}
+
+.item-container {
+  position: relative;
+}
+
+.item-description {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 64px;
+  height: 64px;
+  padding: 4px;
+  border-radius: 15%;
+  z-index: 100;
+}
+
+.item-description h1 {
+  color: #ffc107;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.item-description span {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.item-description.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
