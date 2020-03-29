@@ -8,15 +8,29 @@ toggleButtonContainer.addEventListener("click", function() {
   var onBtn = this.querySelector(".toggle-on");
   var offBtn = this.querySelector(".toggle-off");
 
-  console.log("sdfa");
   if (this.on) {
-    //버튼이 눌린 상태 -> 다시 off 로 돌아가야함, 아무것도 없으면 off, .on이면 on
     this.classList.remove("on");
+    deactiveItemDescription();
   } else {
     this.classList.add("on");
+    activeItemDescription();
   }
   this.on = !this.on;
 });
+
+function activeItemDescription() {
+  var itemDescription = document.querySelectorAll(".item-description");
+  itemDescription.forEach(function(item) {
+    item.classList.add("active");
+  });
+}
+
+function deactiveItemDescription() {
+  var itemDescription = document.querySelectorAll(".item-description");
+  itemDescription.forEach(function(item) {
+    item.classList.remove("active");
+  });
+}
 
 tableData.forEach(function(item) {
   item.addEventListener("mouseenter", onclick);
