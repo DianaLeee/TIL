@@ -5,9 +5,6 @@ var tableData = document.querySelectorAll("th, td");
 var toggleButtonContainer = document.querySelector(".toggle-button");
 
 toggleButtonContainer.addEventListener("click", function() {
-  var onBtn = this.querySelector(".toggle-on");
-  var offBtn = this.querySelector(".toggle-off");
-
   if (this.on) {
     this.classList.remove("on");
     deactiveItemDescription();
