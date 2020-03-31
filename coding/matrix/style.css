@@ -25,11 +25,29 @@ body {
   margin: 20px 0;
 }
 
+/* a img{
+
+  -webkit-filter: grayscale(100%);
+  filter: gray;
+  
+  }
+  
+   
+  
+  a:hover img{
+  
+  -webkit-filter: grayscale(0%);
+  filter: none;
+  
+  } */
+
 img {
   border-radius: 15%;
   width: 128px;
   height: 128px;
-  /* opacity: 0.9; */
+  /* turn to gray color */
+  -webkit-filter: grayscale(100%);
+  filter: gray;
 }
 
 th.basic-item img {
@@ -42,6 +60,21 @@ table {
 
 tr:hover {
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+.item-container:hover img {
+  -webkit-filter: grayscale(0%);
+  filter: none;
+}
+
+/* .item-container img {
+  -webkit-filter: grayscale(100%);
+  filter: gray;
+} */
+
+.item-container img.active {
+  -webkit-filter: grayscale(0%);
+  filter: none;
 }
 
 td,

@@ -17,21 +17,33 @@ toggleButtonContainer.addEventListener("click", function() {
 
 function activeItemDescription() {
   var itemDescription = document.querySelectorAll(".item-description");
+  var itemContainerImg = document.querySelectorAll(".item-container img");
   itemDescription.forEach(function(item) {
+    item.classList.add("active");
+  });
+
+  itemContainerImg.forEach(function(item) {
     item.classList.add("active");
   });
 }
 
 function deactiveItemDescription() {
   var itemDescription = document.querySelectorAll(".item-description");
+  var itemContainerImg = document.querySelectorAll(".item-container img");
+
   itemDescription.forEach(function(item) {
+    item.classList.remove("active");
+  });
+
+  itemContainerImg.forEach(function(item) {
     item.classList.remove("active");
   });
 }
 
 tableData.forEach(function(item) {
-  item.addEventListener("mouseenter", onclick);
-  item.addEventListener("mouseleave", mouseLeave);
+  // item.addEventListener("mouseenter", onclick);
+  // item.addEventListener("mouseleave", mouseLeave);
+  item.addEventListener("click", onclick);
 });
 
 function onclick() {
