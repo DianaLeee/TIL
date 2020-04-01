@@ -1,8 +1,7 @@
-// var itemDescription = document.querySelector(".item-description");
 var tableData = document.querySelectorAll("th, td");
-
-// var toggleImgOn = document.querySelector(".toggle-on");
 var toggleButtonContainer = document.querySelector(".toggle-button");
+var itemDescription = document.querySelectorAll(".item-description");
+var itemContainerImg = document.querySelectorAll(".item-container img");
 
 toggleButtonContainer.addEventListener("click", function() {
   if (this.on) {
@@ -16,8 +15,6 @@ toggleButtonContainer.addEventListener("click", function() {
 });
 
 function activeItemDescription() {
-  var itemDescription = document.querySelectorAll(".item-description");
-  var itemContainerImg = document.querySelectorAll(".item-container img");
   itemDescription.forEach(function(item) {
     item.classList.add("active");
   });
@@ -28,9 +25,6 @@ function activeItemDescription() {
 }
 
 function deactiveItemDescription() {
-  var itemDescription = document.querySelectorAll(".item-description");
-  var itemContainerImg = document.querySelectorAll(".item-container img");
-
   itemDescription.forEach(function(item) {
     item.classList.remove("active");
   });
@@ -41,8 +35,6 @@ function deactiveItemDescription() {
 }
 
 tableData.forEach(function(item) {
-  // item.addEventListener("mouseenter", onclick);
-  // item.addEventListener("mouseleave", mouseLeave);
   item.addEventListener("click", onclick);
 });
 
@@ -58,14 +50,14 @@ function onclick() {
   itemDescription.active = !itemDescription.active;
 }
 
-function mouseLeave() {
-  var itemDescription = this.querySelector(".item-description");
+// function mouseLeave() {
+//   var itemDescription = this.querySelector(".item-description");
 
-  if (itemDescription.active) {
-    itemDescription.classList.remove("active");
-  } else {
-    itemDescription.classList.add("active");
-  }
+//   if (itemDescription.active) {
+//     itemDescription.classList.remove("active");
+//   } else {
+//     itemDescription.classList.add("active");
+//   }
 
-  itemDescription.active = !itemDescription.active;
-}
+//   itemDescription.active = !itemDescription.active;
+// }
