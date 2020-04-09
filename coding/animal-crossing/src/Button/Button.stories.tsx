@@ -1,8 +1,8 @@
-/** @jsx jsx */
+import React from "react";
 import Button from "./Button";
-import { jsx, css } from "@emotion/core";
 import { withKnobs, text, boolean, select } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
+import styled, { css } from "styled-components";
 
 export default {
   title: "components|Button",
@@ -13,21 +13,11 @@ export default {
 export const button = () => {
   const label = text("children", "BUTTON");
   const size = select("size", ["small", "medium", "big"], "medium");
-  const theme = select(
-    "theme",
-    ["primary", "secondary", "tertiary"],
-    "primary"
-  );
+  const theme = select("theme", ["primary", "secondary", "tertiary"], "primary");
   const disabled = boolean("disabled", false);
   const width = text("width", "");
   return (
-    <Button
-      size={size}
-      theme={theme}
-      disabled={disabled}
-      width={width}
-      onClick={action("onClick")}
-    >
+    <Button size={size} theme={theme} disabled={disabled} width={width} onClick={action("onClick")}>
       {label}
     </Button>
   );
@@ -48,36 +38,38 @@ export const tertiaryButton = () => {
   return <Button theme="tertiary">TERTIARY</Button>;
 };
 
-const buttonWrapper = css`
-  .description {
-    margin-bottom: 0.5rem;
-  }
-  & > div + div {
+const StyledDescriptionDiv = styled.div`
+  margin-bottom: 0.5rem;
+`;
+
+const StyledButtonWrapper = styled.div`
+  div + div {
     margin-top: 2rem;
   }
 `;
+
 export const sizes = () => {
   return (
-    <div css={buttonWrapper}>
+    <StyledButtonWrapper>
       <div>
-        <div className="description">Small</div>
+        <StyledDescriptionDiv>Small</StyledDescriptionDiv>
         <Button size="small">BUTTON</Button>
       </div>
       <div>
-        <div className="description">Medium</div>
+        <StyledDescriptionDiv>Medium</StyledDescriptionDiv>
         <Button size="medium">BUTTON</Button>
       </div>
       <div>
-        <div className="description">Big</div>
+        <StyledDescriptionDiv>Big</StyledDescriptionDiv>
         <Button size="big">BUTTON</Button>
       </div>
-    </div>
+    </StyledButtonWrapper>
   );
 };
 
 export const disabled = () => {
   return (
-    <div css={buttonWrapper}>
+    <StyledButtonWrapper>
       <div>
         <Button disabled>Primary</Button>
       </div>
@@ -91,19 +83,19 @@ export const disabled = () => {
           Tertiary
         </Button>
       </div>
-    </div>
+    </StyledButtonWrapper>
   );
 };
 
 export const customSized = () => {
   return (
-    <div css={buttonWrapper}>
+    <StyledButtonWrapper>
       <div>
         <Button width="20rem">CUSTOM WIDTH</Button>
       </div>
       <div>
         <Button width="100%">FULL WIDTH</Button>
       </div>
-    </div>
+    </StyledButtonWrapper>
   );
 };
