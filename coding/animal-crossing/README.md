@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [x] Typescript
 - [x] Storybook
 - [x] styled-components
-- [] react-router-dom
+- [ ] react-router-dom
 
 ## Available Scripts
 
