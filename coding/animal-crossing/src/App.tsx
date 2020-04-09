@@ -16,13 +16,11 @@ const StyledButton = styled.button`
   line-height: 1;
   font-weight: 600;
 `;
+
 const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <StyledButton>HELLO</StyledButton>
-      </header>
+      <StyledButton>HELLO</StyledButton>
     </div>
   );
 };
