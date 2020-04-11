@@ -3,11 +3,12 @@ import queryString from "query-string";
 
 const About = ({ location, match }: any) => {
   const query = queryString.parse(location.search);
-  console.log(query);
 
+  const detail = query.detail === "true";
   return (
     <div>
       <h1>About {match.params.name}</h1>
+      {detail && "detail: hello world"}
     </div>
   );
 };
