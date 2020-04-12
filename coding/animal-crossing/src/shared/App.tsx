@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
-import { Home, About } from "../pages/index";
+import { Home, About, Posts } from "../pages/index";
 import Menu from "../components/Menu";
 
 class App extends Component {
@@ -10,11 +10,10 @@ class App extends Component {
         <Menu />
         <Route exact path="/" component={Home} />
         <Switch>
-          {/* 위치 주의! */}
-          {/* params 사용하기 */}
           <Route path="/about/:name" component={About} />
           <Route path="/about" component={About} />
         </Switch>
+        <Route path="/posts" component={Posts} />
       </div>
     );
   }
