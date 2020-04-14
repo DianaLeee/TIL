@@ -24,7 +24,7 @@ const Movie = (movieInfo: IMovie) => {
             </li>
           ))}
         </ul>
-        <p className="movie__summary">{movieInfo.summary}</p>
+        <p className="movie__summary">{movieInfo.summary.slice(0, 180)}...</p>
       </div>
     </div>
   );
