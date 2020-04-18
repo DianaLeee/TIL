@@ -1,17 +1,29 @@
+@import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
 .movies .movie {
+  font-family: "SpoqaHanSans";
   width: 45%;
   background-color: white;
   margin-bottom: 70px;
   font-weight: 300;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 2.5px;
   color: #adaeb9;
   transition: box-shadow 0.25s ease-in;
   box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.1);
+  font-weight: 400;
 }
 
 .movies .movie:hover {
   box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive layout */
+@media (max-width: 800px) {
+  .movies .movie {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 
 .movies .movie a {
@@ -28,20 +40,23 @@
   max-width: 150px;
   width: 100%;
   margin-right: 30px;
-  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3),
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 1),
     0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+}
+
+.movie .movie__data {
+  overflow: auto;
 }
 
 .movie .movie__title,
 .movie .movie__year {
   margin: 0;
-  font-weight: 400;
 }
 
 .movie .movie__title {
   margin-bottom: 5px;
   font-size: 24px;
-  color: #2c2c2c;
+  color: #4e4e62;
   font-weight: 600;
 }
 
@@ -51,6 +66,7 @@
   margin: 0;
   display: flex;
   margin: 5px 0px;
+  color: #d6d9e1;
 }
 
 .movie__genres li,
@@ -61,4 +77,6 @@
 
 .movie .movie__summary {
   /* font-weight: 300; */
+  color: #d1d1da;
+  font-size: 1.1rem;
 }
