@@ -1,0 +1,49 @@
+.nav {
+  font-family: "SpoqaHanSans";
+  color: #d1d1da;
+
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  /* padding: 10px 20px; */
+  width: 200px;
+  height: 100%;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.01), 0 8px 16px -8px rgba(0, 0, 0, 0.1),
+    0 -6px 16px -6px rgba(0, 0, 0, 0.01);
+  padding-top: 60px;
+}
+
+@media screen and (max-width: 1090px) {
+  .nav {
+    top: initial;
+    bottom: 0px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.nav a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  /* font-size: 12px; */
+  text-align: center;
+  color: inherit;
+  padding: 0 20px;
+
+  font-size: 1.5rem;
+  font-weight: 400;
+  height: 50px;
+}
+
+.nav a i {
+  padding-right: 10px;
+}
+
+.nav a:not(:last-child) {
+  margin-bottom: 20px;
+}
