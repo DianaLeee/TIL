@@ -1,21 +1,77 @@
 @import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
+.about-infos {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  max-width: 1200px;
+  width: 100%;
+
+  margin-top: 80px;
+  padding-top: 35px;
+}
+
+.about-infos .about-info {
+  width: 100%;
+}
+
+.about-infos .about-info {
+  background-color: #ffffff;
+  color: #adaeb9;
+  box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.about-info h1 {
+  color: #555555;
+  font-size: 1.5rem;
+}
+
+.about-info .developers__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style for Adding other developers in list */
+.about-info .developers__list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.about-info .developers__list li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  float: left;
+}
+/* END */
+
+.about-info img {
+  border-radius: 50%;
+  width: 150px;
+}
+
+.about-info p {
+  margin: 0;
+}
+
+.about-info .developers__list .developer__name {
+  margin: 10px 0px;
+  color: #555555;
+  font-size: 1.2rem;
+}
+/* 
 .about__container {
   font-family: "SpoqaHanSans";
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 1080px;
-  height: 100%;
   padding: 50px;
-  padding-top: 70px;
-  margin-left: 50px;
-}
-
-@media screen and (max-width: 1090px) {
-  .about__container {
-    margin-left: 0;
-  }
+  margin-top: 80px;
 }
 
 .about {
@@ -29,7 +85,6 @@
   color: #adaeb9;
   box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.1);
   padding: 20px;
-  font-weight: 400;
   margin-bottom: 50px;
 }
 
@@ -41,7 +96,6 @@
 .about h1 {
   color: #555555;
   font-size: 2rem;
-  font-weight: 700;
 }
 
 .about .developers__list img {
@@ -57,4 +111,4 @@
 
 .about .developers__list p {
   margin: 0;
-}
+} */
