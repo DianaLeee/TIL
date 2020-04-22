@@ -1,15 +1,15 @@
 @import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
 .about-infos {
+  max-width: 1200px;
+  width: 90%;
+  margin-top: 80px;
+  padding-top: 35px;
+
+  /* Styles for Adding other about-info */
   display: flex;
   justify-content: center;
   flex-direction: column;
-
-  max-width: 1200px;
-  width: 100%;
-
-  margin-top: 80px;
-  padding-top: 35px;
 }
 
 .about-infos .about-info {
@@ -51,7 +51,7 @@
 
 .about-info img {
   border-radius: 50%;
-  width: 150px;
+  width: 125px;
 }
 
 .about-info p {
