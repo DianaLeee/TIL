@@ -2,6 +2,14 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Movie from "../components/Movies";
 import "./Home.css";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import { lighten, makeStyles, withStyles } from "@material-ui/core/styles";
+
+const ColorCircularProgress = withStyles({
+  root: {
+    color: "#93ACFF",
+  },
+})(CircularProgress);
 
 interface IMovieFromAPI {
   id: number;
@@ -13,11 +21,11 @@ interface IMovieFromAPI {
 }
 
 let globalPageIndex = 2;
-let oldArray = [];
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [movies, setMovies] = useState([]);
+  const [isFetching, setIsFetching] = useState(false);
 
   const getMoviesFromAPI = async (page?: number) => {
     const result = await axios.get(
@@ -25,18 +33,15 @@ const Home = () => {
     );
     const moviesFromAPI = result.data.data.movies;
 
-    // console.log(moviesFromAPI);
     if (page !== undefined) {
-      // setMovies((prevState) => {
       const newData = movies.concat(...moviesFromAPI);
-      // console.log(newData);
-      //   return { ...prevState, moviesFromAPI };
-      // });
       setMovies(newData);
+      setIsFetching(false);
     } else {
+      // Initial Data fetching
       setMovies(moviesFromAPI);
+      setIsLoading(false);
     }
-    setIsLoading(false);
   };
 
   // componentDidMount
@@ -57,9 +62,9 @@ const Home = () => {
     const scrollTop = document.documentElement.scrollTop;
     const clientHeight = document.documentElement.clientHeight;
 
-    if (scrollTop + clientHeight >= scrollHeight) {
+    if (scrollTop + clientHeight >= scrollHeight && isFetching === false) {
       console.log("do infinite scroll!");
-      // setIsFetching(true);
+      setIsFetching(true);
       getMoviesFromAPI(globalPageIndex++);
     }
   };
@@ -68,11 +73,10 @@ const Home = () => {
     <section className="container">
       {isLoading ? (
         <div className="loader">
-          <span className="loader__text">Loading...</span>
+          <ColorCircularProgress />
         </div>
       ) : (
         <div className="movies">
-          {/* {console.log(movies)} */}
           {movies.map((movie: IMovieFromAPI) => (
             <Movie
               key={movie.id}
@@ -85,6 +89,13 @@ const Home = () => {
             ></Movie>
           ))}
         </div>
+      )}
+      {isFetching ? (
+        <div className="circular-loader">
+          <ColorCircularProgress />
+        </div>
+      ) : (
+        <></>
       )}
     </section>
   );
