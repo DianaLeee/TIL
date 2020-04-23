@@ -12,8 +12,6 @@ body {
   height: 100%;
 }
 
-html,
-body,
 .container {
   height: 100%;
   display: flex;
@@ -26,7 +24,6 @@ body,
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 600;
 }
 
 .movies {
@@ -34,14 +31,15 @@ body,
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding: 50px;
   padding-top: 70px;
-  width: 80%;
+  margin-top: 80px;
+  max-width: 1200px;
+  width: 90%;
 }
 
-@media screen and (max-width: 1090px) {
+@media (max-width: 1024px) {
   .movies {
-    grid-template-columns: 1fr;
-    width: 100%;
+    /* grid-template-columns: 1fr; */
+    width: 90%;
   }
 }

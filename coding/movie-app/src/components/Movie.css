@@ -5,13 +5,11 @@
   width: 45%;
   background-color: white;
   margin-bottom: 70px;
-  font-weight: 300;
   padding: 20px;
   border-radius: 2.5px;
   color: #adaeb9;
   transition: box-shadow 0.25s ease-in;
   box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.1);
-  font-weight: 400;
 }
 
 .movies .movie:hover {
@@ -19,7 +17,7 @@
 }
 
 /* Responsive layout */
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .movies .movie {
     flex: 100%;
     max-width: 100%;
@@ -44,6 +42,16 @@
     0 -12px 36px -8px rgba(0, 0, 0, 0.025);
 }
 
+@media (max-width: 500px) {
+  .movies .movie a {
+    display: block;
+  }
+
+  .movies .movie img {
+    display: flex;
+    margin: 0 auto;
+  }
+}
 .movie .movie__data {
   overflow: auto;
 }
@@ -55,9 +63,7 @@
 
 .movie .movie__title {
   margin-bottom: 5px;
-  font-size: 24px;
   color: #4e4e62;
-  font-weight: 600;
 }
 
 .movie .movie__genres {
@@ -72,11 +78,9 @@
 .movie__genres li,
 .movie .movie__year {
   margin-right: 10px;
-  font-size: 14px;
 }
 
 .movie .movie__summary {
-  /* font-weight: 300; */
   color: #d1d1da;
   font-size: 1.1rem;
 }

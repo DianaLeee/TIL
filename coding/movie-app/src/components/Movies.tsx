@@ -32,7 +32,7 @@ const Movie = (movieInfo: IMovie) => {
           <h3 className="movie__title">{movieInfo.title}</h3>
           <h5 className="movie__year">{movieInfo.year}</h5>
           <ul className="movie__genres">
-            {movieInfo.genres.map((genre, idx) => (
+            {movieInfo.genres.slice(0, 3).map((genre, idx) => (
               <li className="genres__genre" key={idx}>
                 {genre}
               </li>
