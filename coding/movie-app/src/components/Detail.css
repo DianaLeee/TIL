@@ -1,0 +1,90 @@
+@import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+.detail-infos {
+  /* font-family: "Noto Sans"; */
+  max-width: 1200px;
+  width: 90%;
+  margin-top: 80px;
+  padding-top: 35px;
+}
+
+.detail-info {
+  background-color: #ffffff;
+  color: #adaeb9;
+  box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 50px;
+
+  display: flex;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  padding: 20px;
+}
+
+.text__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.text__wrapper h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #000000;
+  font-weight: 700;
+}
+
+li:not(:last-child)::after {
+  content: " / ";
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.detail__genres li {
+  display: inline;
+  font-weight: 100;
+}
+
+.detail__summary h1 {
+  font-size: 1.1rem;
+}
+
+.text__wrapper {
+  margin-left: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .text__wrapper > h1 {
+    font-size: 1.5rem;
+  }
+
+  .detail__summary h1 {
+    font-size: 1rem;
+  }
+
+  .image__wrapper img {
+    width: 200px;
+  }
+}
+
+@media (max-width: 425px) {
+  .detail-info {
+    flex-wrap: wrap;
+  }
+
+  .text__wrapper {
+    margin-left: 0;
+  }
+
+  .image__wrapper {
+    margin: 0 auto;
+  }
+}
+
+.image__wrapper {
+}
