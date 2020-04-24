@@ -5,7 +5,7 @@ import "./Home.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { lighten, makeStyles, withStyles } from "@material-ui/core/styles";
 
-const ColorCircularProgress = withStyles({
+const CustomCircularProgress = withStyles({
   root: {
     color: "#93ACFF",
   },
@@ -46,6 +46,7 @@ const Home = () => {
 
   // componentDidMount
   useEffect(() => {
+    document.title = "Discover Your Movies!";
     getMoviesFromAPI();
   }, []);
 
@@ -73,7 +74,7 @@ const Home = () => {
     <section className="container">
       {isLoading ? (
         <div className="loader">
-          <ColorCircularProgress />
+          <CustomCircularProgress />
         </div>
       ) : (
         <div className="movies">
@@ -92,7 +93,7 @@ const Home = () => {
       )}
       {isFetching ? (
         <div className="circular-loader">
-          <ColorCircularProgress />
+          <CustomCircularProgress />
         </div>
       ) : (
         <></>
