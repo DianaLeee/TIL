@@ -48,5 +48,4 @@ body {
   z-index: 200;
   position: absolute;
   bottom: calc(100vh / 100);
-  /* bottom: 0; */
 }
