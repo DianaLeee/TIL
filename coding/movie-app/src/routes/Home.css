@@ -32,15 +32,15 @@ body {
   align-items: flex-start;
   flex-wrap: wrap;
   padding-top: 70px;
-  margin-top: 80px;
+  /* margin-top: 80px; */
   max-width: 1200px;
-  width: 90%;
+  /* width: 90%; */
 }
 
 @media (max-width: 1024px) {
   .movies {
     /* grid-template-columns: 1fr; */
-    width: 90%;
+    /* width: 90%; */
   }
 }
 

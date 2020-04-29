@@ -77,18 +77,36 @@ const Home = () => {
           <CustomCircularProgress />
         </div>
       ) : (
-        <div className="movies">
-          {movies.map((movie: IMovieFromAPI) => (
-            <Movie
-              key={movie.id}
-              id={movie.id}
-              year={movie.year}
-              title={movie.title}
-              poster={movie.medium_cover_image}
-              summary={movie.summary}
-              genres={movie.genres}
-            ></Movie>
-          ))}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <div
+            className="sorting-dropdown"
+            style={{ marginTop: "70px", paddingTop: "70px", alignSelf: "flex-end" }}
+          >
+            <select>
+              <option value="rating">Rating</option>
+              <option value="title">Title</option>
+            </select>
+          </div>
+          <div className="movies">
+            {movies.map((movie: IMovieFromAPI) => (
+              <Movie
+                key={movie.id}
+                id={movie.id}
+                year={movie.year}
+                title={movie.title}
+                poster={movie.medium_cover_image}
+                summary={movie.summary}
+                genres={movie.genres}
+              ></Movie>
+            ))}
+          </div>
         </div>
       )}
       {isFetching ? (
