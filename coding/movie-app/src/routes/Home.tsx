@@ -64,7 +64,6 @@ const Home = () => {
     const clientHeight = document.documentElement.clientHeight;
 
     if (scrollTop + clientHeight >= scrollHeight && isFetching === false) {
-      console.log("do infinite scroll!");
       setIsFetching(true);
       getMoviesFromAPI(globalPageIndex++);
     }
