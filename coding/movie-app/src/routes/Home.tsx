@@ -4,6 +4,7 @@ import Movie from "../components/Movies";
 import "./Home.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { lighten, makeStyles, withStyles } from "@material-ui/core/styles";
+import sortImg from "../key_down.svg";
 
 const CustomCircularProgress = withStyles({
   root: {
@@ -26,10 +27,18 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [movies, setMovies] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
+  const [sortBy, setSortBy] = useState("rating");
 
-  const getMoviesFromAPI = async (page?: number) => {
+  const getMoviesFromAPI = async (sortBy: string, page?: number) => {
+    let orderBy = "";
+    if (sortBy === "title") {
+      orderBy = "asc";
+    } else if (sortBy === "rating") {
+      orderBy = "desc";
+    }
+
     const result = await axios.get(
-      `https://yts.mx/api/v2/list_movies.json?sort_by=rating&page=${page}`
+      `https://yts.mx/api/v2/list_movies.json?sort_by=${sortBy}&page=${page}&order_by=${orderBy}`
     );
     const moviesFromAPI = result.data.data.movies;
 
@@ -47,7 +56,7 @@ const Home = () => {
   // componentDidMount
   useEffect(() => {
     document.title = "Discover Your Movies!";
-    getMoviesFromAPI();
+    getMoviesFromAPI(sortBy);
   }, []);
 
   useEffect(() => {
@@ -65,8 +74,15 @@ const Home = () => {
 
     if (scrollTop + clientHeight >= scrollHeight && isFetching === false) {
       setIsFetching(true);
-      getMoviesFromAPI(globalPageIndex++);
+      getMoviesFromAPI(sortBy, globalPageIndex++);
     }
+  };
+
+  const handleSorting = (event: any) => {
+    const sortBy = event.target.value;
+    setSortBy(sortBy);
+    setIsLoading(true);
+    getMoviesFromAPI(sortBy);
   };
 
   return (
@@ -84,11 +100,8 @@ const Home = () => {
             alignItems: "center",
           }}
         >
-          <div
-            className="sorting-dropdown"
-            style={{ marginTop: "70px", paddingTop: "70px", alignSelf: "flex-end" }}
-          >
-            <select>
+          <div className="sorting-dropdown">
+            <select value={sortBy} onChange={handleSorting}>
               <option value="rating">Rating</option>
               <option value="title">Title</option>
             </select>
