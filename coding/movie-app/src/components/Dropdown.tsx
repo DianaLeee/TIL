@@ -1,40 +1,56 @@
 import React, { useState, useEffect } from "react";
-import "./Dropdown.css";
+import styled from "styled-components";
+import keydownImg from "../key_down.svg";
 
 interface IDropdown {
-  sorting: Array<string>;
-  default: string;
+  sortList: Array<string>;
+  sortDefault: string;
   onChange(value: string): void;
 }
 
-const Dropdown = (dropdownInfo: IDropdown) => {
-  const [sortBy, setSortBy] = useState("");
+const DropdownContainer = styled.div`
+  margin-top: 80px;
+  padding-top: 35px;
+  align-self: flex-end;
+`;
+
+const StyledSelect = styled.select`
+  width: 100px;
+  appearance: none;
+  padding: 1rem 1rem;
+  border: none;
+  font-family: inherit;
+  background-color: #eff3f7;
+  background: url(${keydownImg}) no-repeat 95%;
+  background-size: 18px;
+  font-size: 1rem;
+  color: #adaeb9;
+
+  &:focus {
+    outline: none;
+  }
+`;
+
+const SortDropdown = (dropdownInfo: IDropdown) => {
+  const [sortItem, setSortItem] = useState(dropdownInfo.sortDefault);
 
   const handleChange = (e: any) => {
-    setSortBy(e.target.value);
-    dropdownInfo.onChange(e.target.value);
+    const sortBy = e.target.value;
+    setSortItem(sortBy);
+    dropdownInfo.onChange(sortBy);
   };
 
-  useEffect(() => {
-    setSortBy(dropdownInfo.default);
-    // dropdownInfo.onCreate(sortBy);
-  }, []);
-
-  // const handleCreate = (value: string) => {
-  //   dropdownInfo.onCreate(value);
-  // };
-
   return (
-    <div className="sorting-dropdown">
-      <select value={sortBy} onChange={handleChange}>
-        {dropdownInfo.sorting.map((item: string) => (
+    <DropdownContainer>
+      <StyledSelect value={sortItem} onChange={handleChange}>
+        {dropdownInfo.sortList.map((item: string) => (
           <option value={item} key={item}>
             {item}
           </option>
         ))}
-      </select>
-    </div>
+      </StyledSelect>
+    </DropdownContainer>
   );
 };
 
-export default Dropdown;
+export default SortDropdown;
