@@ -7,6 +7,15 @@ import { withStyles } from "@material-ui/core/styles";
 import SortDropdown from "../components/Dropdown";
 import styled from "styled-components";
 
+interface IMovieFromAPI {
+  id: number;
+  year: number;
+  title: string;
+  summary: string;
+  medium_cover_image: string;
+  genres: Array<string>;
+}
+
 const CustomCircularProgress = withStyles({
   root: {
     color: "#93ACFF",
@@ -53,20 +62,25 @@ const ScrollLoaderWrapper = styled.div`
 
 let globalPageIndex = 2;
 
-interface IMovieFromAPI {
-  id: number;
-  year: number;
-  title: string;
-  summary: string;
-  medium_cover_image: string;
-  genres: Array<string>;
-}
-
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [movies, setMovies] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
   const [sortBy, setSortBy] = useState("rating");
+
+  // componentDidMount
+  useEffect(() => {
+    document.title = "Discover Your Movies!";
+    console.log(sortBy);
+    getMoviesFromAPI(sortBy);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
 
   const getMoviesFromAPI = async (sortBy: string, page?: number) => {
     let orderBy = "";
@@ -91,20 +105,6 @@ const Home = () => {
       setIsLoading(false);
     }
   };
-
-  // componentDidMount
-  useEffect(() => {
-    document.title = "Discover Your Movies!";
-    console.log(sortBy);
-    getMoviesFromAPI(sortBy);
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
 
   const handleScroll = () => {
     const scrollHeight = document.documentElement.scrollHeight;
