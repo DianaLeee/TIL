@@ -73,7 +73,7 @@ const Home = () => {
     document.title = "Discover Your Movies!";
     console.log(sortBy);
     getMoviesFromAPI(sortBy);
-  }, []);
+  });
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);

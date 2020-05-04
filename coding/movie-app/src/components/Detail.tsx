@@ -105,7 +105,7 @@ const StyledImg = styled.img`
 `;
 
 const Detail = (props: any) => {
-  const { location, history } = props;
+  const { location } = props;
 
   useEffect(() => {
     const { location, history } = props;
@@ -143,8 +143,6 @@ const Detail = (props: any) => {
         </ContentsWrapper>
       </Container>
     );
-
-    // <span>{location.state.title}</span>;
   } else {
     return null;
   }
