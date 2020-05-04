@@ -3,15 +3,55 @@ import axios from "axios";
 import Movie from "../components/Movies";
 import "./Home.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import { lighten, makeStyles, withStyles } from "@material-ui/core/styles";
-import sortImg from "../key_down.svg";
-import Dropdown from "../components/Dropdown";
+import { withStyles } from "@material-ui/core/styles";
+import SortDropdown from "../components/Dropdown";
+import styled from "styled-components";
 
 const CustomCircularProgress = withStyles({
   root: {
     color: "#93ACFF",
   },
 })(CircularProgress);
+
+const Container = styled.section`
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+`;
+
+const ContentsWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const MoviesWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 70px;
+  max-width: 1200px;
+
+  @media (max-width: 1024px) {
+  }
+`;
+
+const PageLoaderWrapper = styled.div`
+  z-index: 200;
+  margin: 0 auto;
+  margin-top: calc(100vh / 2);
+`;
+
+const ScrollLoaderWrapper = styled.div`
+  z-index: 200;
+  position: absolute;
+  bottom: calc(100vh / 100);
+`;
+
+let globalPageIndex = 2;
 
 interface IMovieFromAPI {
   id: number;
@@ -21,8 +61,6 @@ interface IMovieFromAPI {
   medium_cover_image: string;
   genres: Array<string>;
 }
-
-let globalPageIndex = 2;
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -57,12 +95,12 @@ const Home = () => {
   // componentDidMount
   useEffect(() => {
     document.title = "Discover Your Movies!";
+    console.log(sortBy);
     getMoviesFromAPI(sortBy);
   }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    // remove event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -79,37 +117,26 @@ const Home = () => {
     }
   };
 
-  // const handleSort = (event: any) => {
-  //   const sortBy = event.target.value;
-  //   setSortBy(sortBy);
-  //   setIsLoading(true);
-  //   getMoviesFromAPI(sortBy);
-  // };
-
-  const handleCreate = (data: any) => {
-    setSortBy(data);
+  const handleDropdown = (sort: any) => {
+    setSortBy(sort);
     setIsLoading(true);
-    getMoviesFromAPI(data);
-    console.log(sortBy);
+    getMoviesFromAPI(sort);
   };
 
   return (
-    <section className="container">
+    <Container>
       {isLoading ? (
-        <div className="loader">
+        <PageLoaderWrapper>
           <CustomCircularProgress />
-        </div>
+        </PageLoaderWrapper>
       ) : (
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <Dropdown sorting={["rating", "title"]} default={sortBy} onChange={handleCreate} />
-          <div className="movies">
+        <ContentsWrapper>
+          <SortDropdown
+            sortList={["rating", "title"]}
+            sortDefault={sortBy}
+            onChange={handleDropdown}
+          />
+          <MoviesWrapper>
             {movies.map((movie: IMovieFromAPI) => (
               <Movie
                 key={movie.id}
@@ -119,19 +146,19 @@ const Home = () => {
                 poster={movie.medium_cover_image}
                 summary={movie.summary}
                 genres={movie.genres}
-              ></Movie>
+              />
             ))}
-          </div>
-        </div>
+          </MoviesWrapper>
+        </ContentsWrapper>
       )}
       {isFetching ? (
-        <div className="circular-loader">
+        <ScrollLoaderWrapper>
           <CustomCircularProgress />
-        </div>
+        </ScrollLoaderWrapper>
       ) : (
         <></>
       )}
-    </section>
+    </Container>
   );
 };
 
