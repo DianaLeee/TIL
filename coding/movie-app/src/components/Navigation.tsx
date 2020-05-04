@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navigation.css";
 
 const activeStyle = {
@@ -64,12 +64,6 @@ const Navigation = () => {
             </NavLink>
           </div>
         )}
-        {/* <NavLink to="/" activeStyle={activeStyle} exact>
-          Discover
-        </NavLink>
-        <NavLink to="/about" activeStyle={activeStyle}>
-          About
-        </NavLink> */}
       </div>
     </div>
   );
