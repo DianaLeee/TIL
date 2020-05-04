@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/TIL/coding/movie-app/static/css/main.c5def8db.chunk.css",
+    "main.js": "/TIL/coding/movie-app/static/js/main.69f7246f.chunk.js",
+    "main.js.map": "/TIL/coding/movie-app/static/js/main.69f7246f.chunk.js.map",
+    "runtime-main.js": "/TIL/coding/movie-app/static/js/runtime-main.d3e2adf6.js",
+    "runtime-main.js.map": "/TIL/coding/movie-app/static/js/runtime-main.d3e2adf6.js.map",
+    "static/js/2.7226bcfe.chunk.js": "/TIL/coding/movie-app/static/js/2.7226bcfe.chunk.js",
+    "static/js/2.7226bcfe.chunk.js.map": "/TIL/coding/movie-app/static/js/2.7226bcfe.chunk.js.map",
+    "index.html": "/TIL/coding/movie-app/index.html",
+    "precache-manifest.6df367c43ce623034cae06d58339d998.js": "/TIL/coding/movie-app/precache-manifest.6df367c43ce623034cae06d58339d998.js",
+    "service-worker.js": "/TIL/coding/movie-app/service-worker.js",
+    "static/css/main.c5def8db.chunk.css.map": "/TIL/coding/movie-app/static/css/main.c5def8db.chunk.css.map",
+    "static/js/2.7226bcfe.chunk.js.LICENSE.txt": "/TIL/coding/movie-app/static/js/2.7226bcfe.chunk.js.LICENSE.txt",
+    "static/media/key_down.svg": "/TIL/coding/movie-app/static/media/key_down.527090c5.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d3e2adf6.js",
+    "static/js/2.7226bcfe.chunk.js",
+    "static/css/main.c5def8db.chunk.css",
+    "static/js/main.69f7246f.chunk.js"
+  ]
+}
