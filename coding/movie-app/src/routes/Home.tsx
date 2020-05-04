@@ -5,6 +5,7 @@ import "./Home.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { lighten, makeStyles, withStyles } from "@material-ui/core/styles";
 import sortImg from "../key_down.svg";
+import Dropdown from "../components/Dropdown";
 
 const CustomCircularProgress = withStyles({
   root: {
@@ -78,11 +79,18 @@ const Home = () => {
     }
   };
 
-  const handleSorting = (event: any) => {
-    const sortBy = event.target.value;
-    setSortBy(sortBy);
+  // const handleSort = (event: any) => {
+  //   const sortBy = event.target.value;
+  //   setSortBy(sortBy);
+  //   setIsLoading(true);
+  //   getMoviesFromAPI(sortBy);
+  // };
+
+  const handleCreate = (data: any) => {
+    setSortBy(data);
     setIsLoading(true);
-    getMoviesFromAPI(sortBy);
+    getMoviesFromAPI(data);
+    console.log(sortBy);
   };
 
   return (
@@ -100,12 +108,7 @@ const Home = () => {
             alignItems: "center",
           }}
         >
-          <div className="sorting-dropdown">
-            <select value={sortBy} onChange={handleSorting}>
-              <option value="rating">Rating</option>
-              <option value="title">Title</option>
-            </select>
-          </div>
+          <Dropdown sorting={["rating", "title"]} default={sortBy} onChange={handleCreate} />
           <div className="movies">
             {movies.map((movie: IMovieFromAPI) => (
               <Movie
