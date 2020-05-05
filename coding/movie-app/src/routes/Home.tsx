@@ -34,6 +34,7 @@ const ContentsWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  width: 90%;
 `;
 
 const MoviesWrapper = styled.div`
