@@ -13,8 +13,10 @@ https://velog.io/@jakeseo_me/series/33conceptsofjavascript
 - [Hoisting(호이스팅)](https://medium.com/@_diana_lee/javascript-hoisting-%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85-2df9955db5c7)
 
 ## 토이 프로젝트
-- [영화 앱](https://github.com/DianaLeee/TIL/tree/master/coding/movie-app)
-
+1. 영화 소개 앱 
+- [repository](https://github.com/DianaLeee/TIL/tree/master/coding/movie-app)
+- [결과물](https://dianaleee.github.io/movie-introduction-app/)
+- [회고](https://www.notion.so/leediana/3c5a60aaa8914790a491622177815452)
 
 ## 생활코딩 HTML, CSS, JS
 - [강의 정리 WEB1-HTML](https://www.notion.so/leediana/WEB1-HTML-66599dadf8c54c33b879c0180d2f7790)
