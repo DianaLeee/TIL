@@ -1,5 +1,5 @@
 # Movie App
-영화 정보를 보여주는 어플리케이션
+영화 정보를 보여주는 어플리케이션   
 [결과물](https://dianaleee.github.io/movie-introduction-app/)
 
 ## Tech Stack
